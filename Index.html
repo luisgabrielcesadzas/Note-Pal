@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chayote Notes</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Note Pal - Gestor de Tareas</h1>
+    <div class="task-input-section">
+      <input type="text" id="task-input" placeholder="Escribe una nueva tarea">
+      <button id="add-task-btn">Crear Tarea</button>
+    </div>
+    <p id="task-counter">Te quedan 10 tareas disponibles para hoy.</p>
+    <div id="priority-legend">
+      <span class="priority-label">
+        <span class="priority-circle blue"></span> Baja Prioridad
+      </span>
+      <span class="priority-label">
+        <span class="priority-circle yellow"></span> Prioridad Media
+      </span>
+      <span class="priority-label">
+        <span class="priority-circle red"></span> Alta Prioridad
+      </span>
+    </div>
+
+    <div class="task-section">
+      <h2>Tareas del Día</h2>
+      <ul id="task-list"></ul>
+    </div>
+
+    <div class="task-section">
+      <h2>Tareas Pasadas</h2>
+      <ul id="past-task-list"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Chayote Notes © 2024</p>
+    <div class="contact-info">
+      <a href="https://facebook.com/chayotenotes" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://instagram.com/chayotenotes" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="mailto:contacto@chayotenotes.com"><i class="fas fa-envelope"></i> Correo</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

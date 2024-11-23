@@ -1,0 +1,252 @@
+/* Fondo azul suave */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf4fc; /* Azul claro */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #d1e7f8; /* Fondo azul más oscuro */
+  color: #333;
+  font-size: 14px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #task-counter {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Sección de entrada */
+  .task-input-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .task-input-section button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .task-input-section button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Lista de tareas */
+  .task-section {
+    margin-top: 20px;
+  }
+  
+  .task-section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .task-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+/* Estilo de las tareas: diseño compacto y ajuste dinámico */
+.task-item {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el contenido */
+  justify-content: space-between; /* Distribuye el contenido horizontalmente */
+  padding: 10px 15px; /* Espaciado interno */
+  margin-bottom: 12px;
+  background-color: #fef6e4; /* Fondo pastel */
+  border: 1px solid #fde2b8; /* Borde suave acorde al fondo */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  word-wrap: break-word; /* Permite saltos de línea */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+  height: auto; /* Ajuste dinámico del tamaño */
+  min-height: 35px; /* Tamaño mínimo de la tarea */
+}
+
+
+/* Tareas completadas */
+.task-item.completed {
+  text-decoration: line-through; /* Subraya el texto */
+  opacity: 0.5; /* Baja el contraste */
+}
+
+.task-content {
+  flex: 1;
+  margin: 0 10px; /* Espaciado horizontal entre el texto y los botones */
+  color: #6b4e71; /* Tono elegante */
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4; /* Espaciado entre líneas */
+  display: flex; /* Flex para alinear verticalmente */
+  align-items: center; /* Alineación vertical del texto */
+  justify-content: flex-start; /* Texto alineado a la izquierda */
+}
+
+/* Efecto al pasar el mouse */
+.task-item:hover {
+  transform: translateY(-2px); /* Elevación sutil */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más marcada */
+}
+
+  /* Botones compactos */
+  .task-actions {
+    display: flex;
+    gap: 5px; /* Espaciado entre los botones */
+  }
+  
+  .icon-btn {
+    background-color: #e0c3fc; /* Fondo pastel */
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .icon-btn i {
+    font-size: 14px;
+    color: #6b4e71; /* Íconos elegantes */
+  }
+  
+  .icon-btn:hover {
+    background-color: #d3a4f9; /* Cambio de fondo al pasar el mouse */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .icon-btn:hover i {
+    color: #4a275a;
+  }
+  
+  /* Circulo de prioridad */
+  .priority-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .priority-circle.blue {
+    background-color: #a3cef1; /* Azul pastel */
+  }
+  
+  .priority-circle.yellow {
+    background-color: #ffe066; /* Amarillo pastel */
+  }
+  
+  .priority-circle.red {
+    background-color: #ff6b6b; /* Rojo pastel */
+  }
+  
+
+  /* Botones con diseño suave */
+  .icon-btn {
+    background: #e9ecef;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .icon-btn i {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  .icon-btn:hover {
+    background: #ced4da;
+  }
+  
+  .icon-btn:hover i {
+    color: #495057;
+  }
+  
+  /* Tareas pasadas */
+  .task-item.past {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+/* Leyenda de prioridades */
+#priority-legend {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+  
+  .priority-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #6b4e71;
+  }
+  
+  .priority-label .priority-circle {
+    margin-right: 5px;
+  }
+
+  .priority-circle.blue {
+    background-color: #87ceeb; /* Azul */
+  }
+  
+  .priority-circle.yellow {
+    background-color: #ffd700; /* Amarillo */
+  }
+  
+  .priority-circle.red {
+    background-color: #ff4500; /* Rojo */
+  }
+  .task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+  }
