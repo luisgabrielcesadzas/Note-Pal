@@ -1,13 +1,11 @@
-let taskCount = 0; // Contador de tareas
+let taskCount = 0;
 
-// Selección de elementos principales
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
 const pastTaskList = document.getElementById("past-task-list");
 const taskCounter = document.getElementById("task-counter");
 
-// Evento para agregar una nueva tarea
 addTaskBtn.addEventListener("click", () => {
   if (taskCount >= 10) {
     alert("Has alcanzado el límite de 10 tareas por día.");
@@ -20,20 +18,18 @@ addTaskBtn.addEventListener("click", () => {
     return;
   }
 
-  addTaskToList(taskText, taskList); // Añade la tarea a la lista "Tareas del Día"
-  taskInput.value = ""; // Limpia el campo de entrada
-  taskCount++; // Incrementa el contador de tareas
+  addTaskToList(taskText, taskList); 
+  taskInput.value = ""; 
+  taskCount++; 
   updateTaskCounter();
 });
 
-// Función para crear una tarea y añadirla a una lista específica
 function addTaskToList(taskText, list) {
   const taskItem = document.createElement("li");
   taskItem.className = "task-item";
 
-  // Botón de prioridad como un círculo
   const priorityButton = document.createElement("button");
-  priorityButton.className = "priority-circle blue"; // Prioridad por defecto: baja
+  priorityButton.className = "priority-circle blue"; 
   priorityButton.addEventListener("click", () => {
     if (priorityButton.classList.contains("blue")) {
       priorityButton.className = "priority-circle yellow";
@@ -44,40 +40,36 @@ function addTaskToList(taskText, list) {
     }
   });
 
-  // Texto de la tarea
   const taskContent = document.createElement("span");
   taskContent.textContent = taskText;
   taskContent.className = "task-content";
 
-  // Evento para marcar como completada
   taskContent.addEventListener("click", () => {
-    taskItem.classList.toggle("completed"); // Alterna entre completada y no completada
+    taskItem.classList.toggle("completed"); 
   });
 
-  // Botón de editar
   const editButton = document.createElement("button");
   editButton.className = "icon-btn";
   editButton.innerHTML = '<i class="fas fa-edit"></i>';
   editButton.addEventListener("click", () => {
-    const originalText = taskContent.textContent; // Guarda el texto original
+    const originalText = taskContent.textContent;
     const newTaskText = prompt("Edita la tarea:", taskContent.textContent);
     if (newTaskText !== null) {
       const trimmedText = newTaskText.trim();
       if (trimmedText === "") {
-        list.removeChild(taskItem); // Elimina la tarea directamente
-        taskCount--; // Reduce el contador de tareas
+        list.removeChild(taskItem);
+        taskCount--;
         updateTaskCounter();
       } else {
         taskContent.textContent = trimmedText;
         const confirmation = confirm("¿Seguro que quieres guardar este cambio?");
         if (!confirmation) {
-          taskContent.textContent = originalText; // Revertir al texto original si no se confirma
+          taskContent.textContent = originalText; 
         }
       }
     }
   });
 
-  // Botón de eliminar
   const deleteButton = document.createElement("button");
   deleteButton.className = "icon-btn";
   deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
@@ -88,7 +80,6 @@ function addTaskToList(taskText, list) {
     deleteTask(taskItem, list);
   });
 
-  // Ensamblar los elementos
   const actions = document.createElement("div");
   actions.className = "task-actions";
   actions.append(editButton, deleteButton);
@@ -97,16 +88,14 @@ function addTaskToList(taskText, list) {
   list.appendChild(taskItem);
 }
 
-// Función para eliminar una tarea
 function deleteTask(taskItem, list) {
-  list.removeChild(taskItem); // Elimina de la lista actual
-  pastTaskList.appendChild(taskItem); // Mueve a tareas pasadas
-  taskItem.classList.add("past"); // Desactiva edición y prioridades
-  taskCount--; // Reduce el contador
+  list.removeChild(taskItem);
+  pastTaskList.appendChild(taskItem); 
+  taskItem.classList.add("past"); 
+  taskCount--; 
   updateTaskCounter();
 }
 
-// Función para actualizar el contador de tareas
 function updateTaskCounter() {
   const remainingTasks = 10 - taskCount;
   taskCounter.textContent = `Te quedan ${remainingTasks} tareas disponibles para hoy.`;
