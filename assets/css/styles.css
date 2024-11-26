@@ -1,13 +1,11 @@
-/* Fondo azul suave */
 body {
   font-family: Arial, sans-serif;
-  background-color: #eaf4fc; /* Azul claro */
+  background-color: #eaf4fc; 
   color: #333;
   margin: 0;
   padding: 0;
 }
 
-/* Contenedor principal */
 .container {
   max-width: 600px;
   margin: 30px auto;
@@ -17,12 +15,11 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer */
 footer {
   text-align: center;
   margin-top: 20px;
   padding: 10px 0;
-  background-color: #d1e7f8; /* Fondo azul más oscuro */
+  background-color: #d1e7f8; 
   color: #333;
   font-size: 14px;
 }
@@ -49,7 +46,6 @@ footer {
     color: #007bff;
   }
   
-  /* Sección de entrada */
   .task-input-section {
     display: flex;
     gap: 10px;
@@ -75,7 +71,6 @@ footer {
     background-color: #0056b3;
   }
   
-  /* Lista de tareas */
   .task-section {
     margin-top: 20px;
   }
@@ -89,57 +84,52 @@ footer {
     padding: 0;
   }
 
-/* Estilo de las tareas: diseño compacto y ajuste dinámico */
 .task-item {
   display: flex;
-  align-items: center; /* Alinea verticalmente el contenido */
-  justify-content: space-between; /* Distribuye el contenido horizontalmente */
-  padding: 10px 15px; /* Espaciado interno */
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 15px; 
   margin-bottom: 12px;
-  background-color: #fef6e4; /* Fondo pastel */
-  border: 1px solid #fde2b8; /* Borde suave acorde al fondo */
-  border-radius: 12px; /* Bordes redondeados */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  background-color: #fef6e4; 
+  border: 1px solid #fde2b8; 
+  border-radius: 12px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  word-wrap: break-word; /* Permite saltos de línea */
-  overflow: hidden; /* Asegura que el contenido no se desborde */
-  height: auto; /* Ajuste dinámico del tamaño */
-  min-height: 35px; /* Tamaño mínimo de la tarea */
+  word-wrap: break-word; 
+  overflow: hidden; 
+  height: auto; 
+  min-height: 35px; 
 }
 
-
-/* Tareas completadas */
 .task-item.completed {
-  text-decoration: line-through; /* Subraya el texto */
-  opacity: 0.5; /* Baja el contraste */
+  text-decoration: line-through; 
+  opacity: 0.5; 
 }
 
 .task-content {
   flex: 1;
-  margin: 0 10px; /* Espaciado horizontal entre el texto y los botones */
-  color: #6b4e71; /* Tono elegante */
+  margin: 0 10px; 
+  color: #6b4e71; 
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.4; /* Espaciado entre líneas */
-  display: flex; /* Flex para alinear verticalmente */
-  align-items: center; /* Alineación vertical del texto */
-  justify-content: flex-start; /* Texto alineado a la izquierda */
+  line-height: 1.4; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
-/* Efecto al pasar el mouse */
 .task-item:hover {
-  transform: translateY(-2px); /* Elevación sutil */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra más marcada */
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-  /* Botones compactos */
   .task-actions {
     display: flex;
-    gap: 5px; /* Espaciado entre los botones */
+    gap: 5px; 
   }
   
   .icon-btn {
-    background-color: #e0c3fc; /* Fondo pastel */
+    background-color: #e0c3fc; 
     border: none;
     padding: 8px;
     border-radius: 50%;
@@ -152,19 +142,18 @@ footer {
   
   .icon-btn i {
     font-size: 14px;
-    color: #6b4e71; /* Íconos elegantes */
+    color: #6b4e71; 
   }
   
   .icon-btn:hover {
-    background-color: #d3a4f9; /* Cambio de fondo al pasar el mouse */
+    background-color: #d3a4f9; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   }
   
   .icon-btn:hover i {
     color: #4a275a;
   }
-  
-  /* Circulo de prioridad */
+
   .priority-circle {
     width: 15px;
     height: 15px;
@@ -174,19 +163,17 @@ footer {
   }
   
   .priority-circle.blue {
-    background-color: #a3cef1; /* Azul pastel */
+    background-color: #a3cef1; 
   }
   
   .priority-circle.yellow {
-    background-color: #ffe066; /* Amarillo pastel */
+    background-color: #ffe066; 
   }
   
   .priority-circle.red {
-    background-color: #ff6b6b; /* Rojo pastel */
+    background-color: #ff6b6b; 
   }
   
-
-  /* Botones con diseño suave */
   .icon-btn {
     background: #e9ecef;
     border: none;
@@ -211,12 +198,12 @@ footer {
     color: #495057;
   }
   
-  /* Tareas pasadas */
+  
   .task-item.past {
     opacity: 0.6;
     pointer-events: none;
   }
-/* Leyenda de prioridades */
+
 #priority-legend {
     display: flex;
     justify-content: space-between;
@@ -236,15 +223,15 @@ footer {
   }
 
   .priority-circle.blue {
-    background-color: #87ceeb; /* Azul */
+    background-color: #87ceeb; 
   }
   
   .priority-circle.yellow {
-    background-color: #ffd700; /* Amarillo */
+    background-color: #ffd700;
   }
   
   .priority-circle.red {
-    background-color: #ff4500; /* Rojo */
+    background-color: #ff4500; 
   }
   .task-item.completed {
     text-decoration: line-through;
